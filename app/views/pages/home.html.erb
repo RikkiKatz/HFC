@@ -1,8 +1,14 @@
-<div class="jumbotron">
-	<div "center">
+<div class="jumbotron center">
+
 	<h1>HFC Meeting Rooms</h1>
 	<p>Check room occupancies here.</p>	
-	<%= link_to "Log In", "#", class: "btn btn-primary btn-lg" %>
-	<%= link_to "Sign Up", "#", class: "btn btn-default btn-lg" %>
-</div>
+
+	<% if user_signed_in? %>
+		# do something
+	<% else %>
+		<p>
+			<%= link_to "Log In", new_user_session_path, class: "btn btn-primary btn-lg" %>
+			<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
+		</p>
+	<% end %>
 </div>
