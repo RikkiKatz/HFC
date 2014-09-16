@@ -4,7 +4,8 @@
 	<p>Check room occupancies here.</p>	
 
 	<% if user_signed_in? %>
-		# do something
+		<%= link_to "Room 1", room1_path, class: "btn btn-primary btn-lg" %>
+
 	<% else %>
 		<p>
 			<%= link_to "Log In", new_user_session_path, class: "btn btn-primary btn-lg" %>
