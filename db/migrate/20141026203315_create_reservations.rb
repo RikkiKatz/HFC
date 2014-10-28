@@ -1,0 +1,13 @@
+class CreateReservations < ActiveRecord::Migration
+  def change
+    create_table :reservations do |t|
+      t.integer :user_id
+      t.string :project
+      t.time :start_time
+      t.time :end_time
+      t.string :which_room
+
+      t.timestamps
+    end
+  end
+end

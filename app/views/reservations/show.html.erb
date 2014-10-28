@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @reservation.user_id %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @reservation.project %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @reservation.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @reservation.end_time %>
+</p>
+
+<p>
+  <strong>Which room:</strong>
+  <%= @reservation.which_room %>
+</p>
+
+<%= link_to 'Edit', edit_reservation_path(@reservation), class: "btn btn-warning btn-sm" %> |
+<%= link_to 'Back', reservations_path, class: "btn btn-warning btn-sm" %>
