@@ -15,22 +15,27 @@
     <%= f.label :user_id %><br>
     <%= f.number_field :user_id %>
   </div>
+
   <div class="field">
     <%= f.label :project %><br>
     <%= f.text_field :project %>
   </div>
+
   <div class="field">
     <%= f.label :start_time %><br>
-    <%= f.time_select :start_time %>
+    <%= f.time_select :start_time, {ampm: true} %>
   </div>
+
   <div class="field">
     <%= f.label :end_time %><br>
-    <%= f.time_select :end_time %>
+    <%= f.time_select :end_time, {ampm: true} %>
   </div>
+
   <div class="field">
     <%= f.label :which_room %><br>
     <%= f.text_field :which_room %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

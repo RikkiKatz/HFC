@@ -20,8 +20,8 @@
         <tr>
           <td><%= reservation.user_id %></td>
           <td><%= reservation.project %></td>
-          <td><%= reservation.start_time %></td>
-          <td><%= reservation.end_time %></td>
+          <td><%= reservation.start_time.strftime("%I:%M %p") %></td>
+          <td><%= reservation.end_time.strftime("%I:%M %p") %></td>
           <td><%= reservation.which_room %></td>
           <td><%= link_to 'Show', reservation %></td>
           <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>

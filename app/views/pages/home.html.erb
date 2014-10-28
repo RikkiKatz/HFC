@@ -4,7 +4,7 @@
 	<br>
 
 	<% if user_signed_in? %>
-		<p>Welcome @user!</p>
+		<p>Welcome current_user.name!</p>
 	<% else %>
 		<p>
 			<%= link_to "Log In", new_user_session_path, class: "btn btn-primary btn-lg" %>
