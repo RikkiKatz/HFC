@@ -7,4 +7,5 @@ class PagesController < ApplicationController
 
   def room2
   end
+
 end
