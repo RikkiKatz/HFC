@@ -4,7 +4,8 @@ class ReservationsController < ApplicationController
   # GET /reservations
   # GET /reservations.json
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.all.order(which_room: :asc, start_time: :desc)
+    @rooms = Room.all
   end
 
   # GET /reservations/1
@@ -69,6 +70,6 @@ class ReservationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reservation_params
-      params.require(:reservation).permit(:user_id, :project, :start_time, :end_time, :which_room)
+      params.require(:reservation).permit(:project, :start_time, :end_time, :which_room)
     end
 end

@@ -4,11 +4,11 @@
   <table class = "table table-striped">
     <thead>
       <tr>
-        <th>User</th>
+        <th>User Name</th>
         <th>Project</th>
         <th>Start time</th>
         <th>End time</th>
-        <th>Which room</th>
+        <th>Room Number</th>
         <th></th>
         <th></th>
         <th></th>
@@ -18,7 +18,7 @@
     <tbody>
       <% @reservations.each do |reservation| %>
         <tr>
-          <td><%= reservation.user_id %></td>
+          <td><%= current_user.name %> </td> 
           <td><%= reservation.project %></td>
           <td><%= reservation.start_time.strftime("%I:%M %p") %></td>
           <td><%= reservation.end_time.strftime("%I:%M %p") %></td>

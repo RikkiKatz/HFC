@@ -11,29 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+  <br>
+  <div class = "row">
+    <div class = "form-group col-md-3">
+      <%= f.label :project %><br>
+      <%= f.text_field :project, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :project %><br>
-    <%= f.text_field :project %>
+  <div class = "row">
+    <div class = "form-group col-md-3">
+      <%= f.label :start_time %><br>
+      <%= f.time_field :start_time, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :start_time %><br>
-    <%= f.time_select :start_time, {ampm: true} %>
+  <div class = "row">
+    <div class = "form-group col-md-3">
+      <%= f.label :end_time %><br>
+      <%= f.time_field :end_time, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :end_time %><br>
-    <%= f.time_select :end_time, {ampm: true} %>
-  </div>
-
-  <div class="field">
-    <%= f.label :which_room %><br>
-    <%= f.text_field :which_room %>
+  <div class = "row">
+    <div class = "form-group col-md-3">
+      <%= f.label :room_number %><br>
+      <%= f.select(:which_room, [['Room 1', 1], ["Room 2", 2], ["Room 3", 3], ["Red", 4], ["Orange", 5], ["Yellow", 6], ["Green", 7]]) %>
+    </div>
   </div>
 
   <div class="actions">

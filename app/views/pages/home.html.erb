@@ -1,10 +1,12 @@
 <div class="jumbotron center">
-
-	<h1>HFC Meeting Rooms</h1>
-	<br>
+	
+	<% if ! user_signed_in? %>
+		<h1>Welcome to the HFC Meeting Rooms Website</h1>
+		<h2>Log in to access room reservations.</h2><br>
+	<% end %>	
 
 	<% if user_signed_in? %>
-		<p>Welcome  <%= current_user.name %>!</p>
+		<p>Welcome <%= current_user.name %>!</p>
 	<% else %>
 		<p>
 			<%= link_to "Log In", new_user_session_path, class: "btn btn-warning btn-lg" %>
