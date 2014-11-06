@@ -5,7 +5,6 @@ class ReservationsController < ApplicationController
   # GET /reservations.json
   def index
     @reservations = Reservation.all.order(which_room: :asc, start_time: :desc)
-    @rooms = Room.all
   end
 
   # GET /reservations/1
