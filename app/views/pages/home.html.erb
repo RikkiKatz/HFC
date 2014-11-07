@@ -1,14 +1,14 @@
 <div class="jumbotron center">
-	
-	<% if ! user_signed_in? %>
-		<h1>Welcome to the HFC Meeting Rooms Website</h1>
-		<h2>Log in to access room reservations.</h2><br>
-	<% end %>	
 
 	<% if user_signed_in? %>
 		<p>Welcome <%= current_user.name %>!</p>
+		<br>
+		<%= link_to 'New Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %>
+
 	<% else %>
 		<p>
+			<h1>Welcome to the HFC Meeting Rooms Website</h1>
+			<h2>Log in to access room reservations.</h2><br>
 			<%= link_to "Log In", new_user_session_path, class: "btn btn-warning btn-lg" %>
 			<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
 		</p>
