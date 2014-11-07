@@ -7,14 +7,12 @@ class ReservationsController < ApplicationController
     @reservations = Reservation.all.order(which_room: :asc, start_time: :desc)
   end
 
-  # GET /reservations/1
-  # GET /reservations/1.json
-  def show
-  end
-
   # GET /reservations/new
   def new
     @reservation = Reservation.new
+  end
+
+  def show
   end
 
   # GET /reservations/1/edit

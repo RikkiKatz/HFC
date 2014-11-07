@@ -1,24 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Project:</strong>
-  <%= @reservation.project %>
-</p>
 
-<p>
-  <strong>Start time:</strong>
-  <%= @reservation.start_time %>
-</p>
+<div class="panel panel-default">
+	<div class="panel-body">
 
-<p>
-  <strong>End time:</strong>
-  <%= @reservation.end_time %>
-</p>
+		<p>
+			<h2 class="panel-title"> <strong>User:</strong> 
+			<%= current_user.name %> </h2>
+		</p>
 
-<p>
-  <strong>Room number:</strong>
-  <%= @reservation.which_room %>
-</p>
+		<p>
+			<h2 class="panel-title"> <strong>Project:</strong> 
+			<%= @reservation.project %> </h2>
+		</p>
 
-<%= link_to 'Edit', edit_reservation_path(@reservation), class: "btn btn-warning btn-sm" %> |
-<%= link_to 'Back', reservations_path, class: "btn btn-warning btn-sm" %>
+		<p>
+		  <h2 class="panel-title"> <strong>Start time:</strong>
+		  <%= @reservation.start_time.strftime("%I:%M %p") if @reservation.start_time != nil %> </h2>
+		</p>
+
+		<p>
+		  <h2 class="panel-title"> <strong>End time:</strong>
+		  <%= @reservation.end_time.strftime("%I:%M %p") if @reservation.end_time != nil %> </h2>
+		</p>
+
+		<p>
+		  <h2 class="panel-title"> <strong>Room number:</strong>
+		  <%= @reservation.which_room %> </h2>
+		</p>
+	</div>
+
+	<div class = "panel-footer">
+		<%= link_to 'Edit', edit_reservation_path(@reservation), class: "btn btn-warning btn-sm" %> |
+		<%= link_to 'Back', reservations_path, class: "btn btn-warning btn-sm" %>
+	</div>
+</div>

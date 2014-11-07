@@ -1,36 +1,51 @@
-<h1>Room Reservations</h1>
+<div class="panel panel-default">
+  
+  <% if user_signed_in? %>
+    <div class="panel-heading">
+        <p><br><font size="6">Welcome <%= current_user.name %>!</font></p>
+        <%= link_to 'New Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %>
+        <br>
+    </div>
 
-<div class="table-responsive">
-  <table class = "table table-striped">
-    <thead>
-      <tr>
-        <th>User Name</th>
-        <th>Project</th>
-        <th>Start time</th>
-        <th>End time</th>
-        <th>Room Number</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
+    <div class="panel-body">
+      <div class="table-responsive">
+        <table class = "table table-striped">
+          <thead>
+            <tr>
+              <th>User Name</th>
+              <th>Project</th>
+              <th>Start time</th>
+              <th>End time</th>
+              <th>Room Number</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
 
-    <tbody>
-      <% @reservations.each do |r| %>
-        <tr>
-          <td><%= current_user.name %></td> 
-          <td><%= r.project %></td>
-          <td><%= r.start_time.strftime("%I:%M %p") if r.start_time != nil %></td>
-          <td><%= r.end_time.strftime("%I:%M %p") if r.end_time != nil %></td>
-          <td><%= r.which_room %></td>
-          <td><%= link_to 'Edit', edit_reservation_path(r) %></td>
-          <td><%= link_to 'Destroy', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>  
+          <tbody>
+            <% @reservations.each do |r| %>
+              <tr>
+                <td><%= current_user.name %></td> 
+                <td><%= r.project %></td>
+                <td><%= r.start_time.strftime("%I:%M %p") if r.start_time != nil %></td>
+                <td><%= r.end_time.strftime("%I:%M %p") if r.end_time != nil %></td>
+                <td><%= r.which_room %></td>
+                <td><%= link_to 'Edit', edit_reservation_path(r) %></td>
+                <td><%= link_to 'Destroy', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-<br>
-
-<%= link_to 'New Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %>
+  <% else %>
+    <div class="jumbotron center">
+      <h1>HFC Meeting Rooms Website</h1>
+      <h2>Log in to access room reservations.</h2><br>
+      <%= link_to "Log In", new_user_session_path, class: "btn btn-warning btn-lg" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
+    </div>
+  <% end %>
+</div>
