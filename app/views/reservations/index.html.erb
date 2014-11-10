@@ -1,11 +1,12 @@
 <% if user_signed_in? %>
-  <div class="jumbotron center">
-    <p><br><font size="6">Welcome <%= current_user.name %>!</font></p> <br>
+
+  <br>
+  <div align="center">
     <p><%= link_to 'Create a Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %></p>
   </div>
+  <br>
 
-<div class="panel panel-default">
-
+  <div class="panel panel-default">
     <div class="panel-heading">
       <div class="panel-tile">
         <font size="4">Current Reservations</font>
@@ -44,13 +45,13 @@
         </table>
       </div>
     </div>
+  </div>
 
-  <% else %>
-    <div class="jumbotron center">
-      <h1>HFC Meeting Rooms Website</h1>
-      <h2>Log in to access room reservations.</h2><br>
-      <%= link_to "Log In", new_user_session_path, class: "btn btn-warning btn-lg" %>
-      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
-    </div>
-  <% end %>
-</div>
+<% else %>
+  <div class="jumbotron center">
+    <h1>HFC Meeting Rooms Website</h1>
+    <h2>Log in to access room reservations.</h2><br>
+    <%= link_to "Log In", new_user_session_path, class: "btn btn-warning btn-lg" %>
+    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
+  </div>
+<% end %>
