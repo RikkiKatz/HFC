@@ -4,7 +4,7 @@ class ReservationsController < ApplicationController
   # GET /reservations
   # GET /reservations.json
   def index
-    @reservations = Reservation.all.order(which_room: :asc, start_time: :desc)
+    @reservations = Reservation.today.order(which_room: :asc, start_time: :desc)
   end
 
   # GET /reservations/new

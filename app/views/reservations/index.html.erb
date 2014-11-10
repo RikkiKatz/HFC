@@ -1,10 +1,15 @@
+<% if user_signed_in? %>
+  <div class="jumbotron center">
+    <p><br><font size="6">Welcome <%= current_user.name %>!</font></p> <br>
+    <p><%= link_to 'Create a Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %></p>
+  </div>
+
 <div class="panel panel-default">
-  
-  <% if user_signed_in? %>
+
     <div class="panel-heading">
-        <p><br><font size="6">Welcome <%= current_user.name %>!</font></p>
-        <%= link_to 'New Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %>
-        <br>
+      <div class="panel-tile">
+        <font size="4">Current Reservations</font>
+      </div>
     </div>
 
     <div class="panel-body">
