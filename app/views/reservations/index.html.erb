@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
 
   <div class="jumbotron center">
-    <p><font size="6"> Welcome <%= current_user.name %> ! </font></p><br>
+    <p><font size="6"> Welcome <%= current_user.name %>! </font></p><br>
     <p><%= link_to 'Create a Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %></p>
   </div>
 
