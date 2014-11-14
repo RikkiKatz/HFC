@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg:							#ecf0f1;
+$body-bg:							#ecf0f1; 
 $font-family-sans-serif:		'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:					45px;
 $navbar-default-bg:				white;
@@ -10,8 +10,9 @@ $jumbotron-bg:						white;
 
 @import 'bootstrap';
 
+
 .center {
-    text-align: center;
+   text-align: center;
 }
 
 .navbar-brand {
