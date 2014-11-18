@@ -10,11 +10,37 @@ $jumbotron-bg:						white;
 
 @import 'bootstrap';
 
+#image-container { 
+  min-width:782px; /* width of 3 images (746px) plus images' padding and border (36px) */ 
+ } 
 
-.center {
-   text-align: center;
+#image-container img { 
+  background-color:#fff;  
+ } 
+
+#image-right { 
+  float:right; 
+  width:150px; 
+  height:300px; 
+ } 
+
+#image-left { 
+  float:left; 
+  width:150px; 
+  height:300px; 
+ } 
+
+#image-center { 
+  display:block; 
+  width:840px; 
+  height:300px; 
+  margin:auto; 
 }
 
 .navbar-brand {
-    font-weight: bold;
+    font-weight:bold;
+}
+
+.center {
+   text-align:center;
 }

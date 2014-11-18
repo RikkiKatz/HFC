@@ -1,16 +1,17 @@
 <% if user_signed_in? %>
 
-  <div id="container">
-    <img id="image" src="../assets/main_img.png"/>
-      <p id="text">
-        <p><font size="6"> Welcome <%= current_user.name %>!</font></p><br>
-      </p>
-  </div>
-
-  <div id= "center"> 
-  <p><%= link_to 'Create a Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %></p>
+  <div id="image-container"> 
+    <img id="image-right" src="../assets/right_slice.png" alt="left"> 
+    <img id="image-left" src="../assets/left_slice.png" alt="right"> 
+    <img id="image-center" src="../assets/main_img.png" alt="main"> 
+  </div> 
+  
+  <center>
+    <p><font size="6"> Welcome <%= current_user.name %>!</font></p><br>
+    <p><%= link_to 'Create a Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %></p>
+  </center>
+  
   <br>
-</div>
 
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -54,10 +55,22 @@
   </div>
 
 <% else %>
-  <div class="jumbotron center">
-    <h1>HFC Meeting Rooms Website</h1>
-    <h2>Log in to access room reservations.</h2><br>
-    <%= link_to "Log In", new_user_session_path, class: "btn btn-warning btn-lg" %>
-    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
+
+  <div style="position:relative">
+    <div style="top:50px; left:50px; z-index:60;" id="image">
+      <center><img src="../assets/main_img.png" alt="Main Image"/></center>
+    </div>
+  </div> 
+
+  <div class = "jumbotron">
+    <div class = "container">
+      <div class = "center">
+        <h1>HFC Meeting Rooms Website</h1>
+        <h2>Log in to access room reservations.</h2><br>
+        <%= link_to "Log In", new_user_session_path, class: "btn btn-warning btn-lg" %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
+      </div>
+    </div>
   </div>
+
 <% end %>
