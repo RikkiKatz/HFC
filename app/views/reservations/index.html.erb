@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
 
   <div id="image-container"> 
-    <img id="image-right" src="../assets/right_slice.png" alt="left"> 
+    <img id="image-right" src="../assets/right_slice.png" alt="left" alt="superimposed-text"> 
     <img id="image-left" src="../assets/left_slice.png" alt="right"> 
     <img id="image-center" src="../assets/main_img.png" alt="main"> 
   </div> 
@@ -10,7 +10,7 @@
     <p><font size="6"> Welcome <%= current_user.name %>!</font></p><br>
     <p><%= link_to 'Create a Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %></p>
   </center>
-  
+
   <br>
 
   <div class="panel panel-default">
@@ -56,10 +56,10 @@
 
 <% else %>
 
-  <div style="position:relative">
-    <div style="top:50px; left:50px; z-index:60;" id="image">
-      <center><img src="../assets/main_img.png" alt="Main Image"/></center>
-    </div>
+ <div id="image-container"> 
+    <img id="image-right" src="../assets/right_slice.png" alt="left" alt="superimposed-text"> 
+    <img id="image-left" src="../assets/left_slice.png" alt="right"> 
+    <img id="image-center" src="../assets/main_img.png" alt="main"> 
   </div> 
 
   <div class = "jumbotron">
