@@ -30,20 +30,22 @@
         $('#start_time').timepicker('setTime', new Date());
       });
   </script>
-
-    <div class = "row">
-      <div class = "form-group col-md-3">
-        <%= f.label :start_time %><br>
-        <%= f.time_field :start_time, class: "form-control" %>
+  
+  <div class ="durationExample">
+      <div class = "row">
+        <div class = "form-group col-md-3">
+          <%= f.label :start_time %><br>
+          <%= f.time_field :start_time, class: "form-control" %>
+        </div>
       </div>
-    </div>
 
-    <div class = "row">
-      <div class = "form-group col-md-3">
-        <%= f.label :end_time %><br>
-        <%= f.time_field :end_time, class: "form-control" %>
+      <div class = "row">
+        <div class = "form-group col-md-3">
+          <%= f.label :end_time %><br>
+          <%= f.time_field :end_time, class: "form-control" %>
+        </div>
       </div>
-    </div>
+  </div>
 
     <div class = "row">
       <div class = "form-group col-md-3">
