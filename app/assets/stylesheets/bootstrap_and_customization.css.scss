@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700);
 
-$body-bg:							        white;
+$body-background-color:       #2ecc71;
 $font-family-sans-serif:      'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:               45px;
 $navbar-default-bg:           white;
@@ -30,13 +30,27 @@ $jumbotron-bg:						    white;
   height:300px; 
  } 
 
-#image-center { 
+/* #image-center { 
   display:block; 
   width:840px; 
   height:300px; 
   margin:auto; 
+} */
+
+#image-center { 
+  display:block; 
+  width:100%;  
+  margin:auto; 
 }
+
+/* div#image-left-meetingrm { float:left; width:auto; background:url("../assets/left_slice.png") 0 1px repeat-x; padding-left:25px; border:1px solid red; }
+div#image-right-meetingrm { float:left; width:auto; background:url("../assets/right_slice.png") right 0 repeat-x; padding-right:25px; border:1px solid lime;}
+*/
 
 .navbar-brand {
     font-weight:bold;
+}
+
+body {
+  background-color: #2ecc71;
 }

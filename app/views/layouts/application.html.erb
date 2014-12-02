@@ -6,28 +6,19 @@
 	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
-
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-	<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
-	<script type="text/javascript">
-
-	$(document).ready(function() {
-		$('#durationExample').timepicker({
-   		'minTime': '9:00am',
-			'maxTime': '8:00pm',
-			'showDuration': true
-		});
-	});
-
-
-	</script>
-
-
+  <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
   <%= csrf_meta_tags %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+
+<!-- this should go after your </body> -->
+<link rel="stylesheet" type="text/css" href="/jquery.datetimepicker.css"/ >
+<script src="/jquery.js"></script>
+<script src="/jquery.datetimepicker.js"></script>
+
  <%= render 'layouts/header' %>
 <div class = "container">
 	<% flash.each do |name, msg| %>

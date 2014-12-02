@@ -1,13 +1,11 @@
+<p>
 <% if user_signed_in? %>
 
-  <div id="image-container"> 
-    <img id="image-right" src="../assets/right_slice.png" alt="left" alt="superimposed-text"> 
-    <img id="image-left" src="../assets/left_slice.png" alt="right"> 
-    <img id="image-center" src="../assets/main_img.png" alt="main"> 
-  </div> 
+  <div id="image-container">
+    <img id="image-center" src="../assets/main_img.png" class="img-responsive" alt="Responsive image"> 
+  </div><br>
   
-  <center>
-    <p><font size="6"> Welcome <%= current_user.name %>!</font></p><br>
+  <center>    
     <p><%= link_to 'Create a Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %></p>
   </center>
 
@@ -21,6 +19,7 @@
     </div>
 
     <div class="panel-body">
+
       <div class="table-responsive">
         <table class = "table table-striped">
           <thead>
@@ -56,21 +55,22 @@
 
 <% else %>
 
- <div id="image-container"> 
-    <img id="image-right" src="../assets/right_slice.png" alt="left" alt="superimposed-text"> 
-    <img id="image-left" src="../assets/left_slice.png" alt="right"> 
-    <img id="image-center" src="../assets/main_img.png" alt="main"> 
-  </div> 
 
   <div class = "jumbotron">
     <div class = "container">
-      <div class = "center">
-        <h1>HFC Meeting Rooms Website</h1>
-        <h2>Log in to access room reservations.</h2><br>
-        <%= link_to "Log In", new_user_session_path, class: "btn btn-warning btn-lg" %>
-        <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
+       <div id="image-container"> 
+        <img id="image-center" src="../assets/main_img.png" class="img-responsive" alt="Responsive image"> 
+      </div> 
+      <div class = "jumbotron">
+        <div class = "container">
+          <center><h1>HFC Meeting Rooms Website</h1>
+          <h2>Log in to access room reservations.</h2><br>
+          <%= link_to "Log In", new_user_session_path, class: "btn btn-warning btn-lg" %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %></center>
+        </div>
       </div>
     </div>
   </div>
 
 <% end %>
+</p>

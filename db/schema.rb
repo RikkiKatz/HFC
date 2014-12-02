@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 20141104201358) do
 
   create_table "reservations", force: true do |t|
     t.integer  "user_id"
-    t.string   "project"      null: false
-    t.time     "start_time"   null: false
-    t.time     "end_time"     null: false
+    t.string   "project" 
+    t.time     "start_time"   
+    t.time     "end_time"     
     t.string   "which_room"
     t.datetime "created_at"
     t.datetime "updated_at"
