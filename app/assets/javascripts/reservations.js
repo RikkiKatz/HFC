@@ -2,6 +2,7 @@
 //implemented in app/views/reserveations/_form.html.erb
 //for start_time and end_time
 
+/*
 $(function){
 	$('.time-pick').timepicker({
 	  'minTime': '9:00am',
@@ -9,7 +10,7 @@ $(function){
 	  'showDuration': true
 	});
 });
-
+*/
 
 
 //$('.datetimepicker').datetimepicker();
