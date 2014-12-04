@@ -9,7 +9,7 @@ $(function){
 	  'maxTime': '9:00pm',
 	  'showDuration': true
 	});
-});
+};
 */
 
 

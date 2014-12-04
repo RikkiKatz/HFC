@@ -8,6 +8,7 @@ module Website
 
     config.assets.initialize_on_precompile = false
     config.action_controller.include_all_helpers = false
+    config.serve_static_assets = true
 
   end
 end
