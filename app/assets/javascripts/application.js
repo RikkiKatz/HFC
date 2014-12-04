@@ -11,8 +11,14 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.timepicker.js
+//= require jquery.datetimepicker
+//= require jquery.datetimepicker/init
+//= require jquery.timepicker
+//= require jquery.timepicker.min
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+
+
+$('.datetimepicker').datetimepicker();

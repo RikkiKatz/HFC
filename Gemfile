@@ -13,6 +13,7 @@ gem 'devise', '3.0.0.rc'
 gem "bower-rails", "~> 0.9.1"
 gem 'protected_attributes'
 gem 'jquery-timepicker-rails'
+gem 'jquery-datetimepicker-rails'
 
 
 group :doc do

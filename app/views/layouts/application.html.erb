@@ -5,6 +5,8 @@
 	<title>Meeting Rooms</title>
 	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag 'jquery.timepicker.min' %>
+	<%= javascript_include_tag 'jquery.datetimepicker' %>
 
   <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
   <%= csrf_meta_tags %>
@@ -13,11 +15,6 @@
 </head>
 
 <body>
-
-<!-- this should go after your </body> -->
-<link rel="stylesheet" type="text/css" href="/jquery.datetimepicker.css"/ >
-<script src="/jquery.js"></script>
-<script src="/jquery.datetimepicker.js"></script>
 
  <%= render 'layouts/header' %>
 <div class = "container">
