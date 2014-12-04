@@ -10,12 +10,6 @@ $(function){
 	});
 });
 
-$(function){
-	$('.time-pick').datetimepicker({
-	  'minTime': '9:00am',
-	  'maxTime': '9:00pm',
-	  'showDuration': true
-	});
-});
 
-$('.datetimepicker').datetimepicker();
+
+//$('.datetimepicker').datetimepicker();
