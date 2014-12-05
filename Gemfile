@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'http://rails-assets.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.3'
@@ -12,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'devise', '3.0.0.rc'
 gem "bower-rails", "~> 0.9.1"
 gem 'protected_attributes'
+gem 'rails-assets-jquery-timepicker-jt'
 
 
 group :doc do

@@ -13,6 +13,14 @@
 
   <form role="form">
     <br>
+  
+   <div class = "row">
+      <div class = "form-group col-md-3">
+        <%= f.label :members %><br>
+        <%= f.collection_select( :user_id, User.all, :id, :name, include_blank: true) %>
+      </div>
+    </div>
+
     <div class = "row">
       <div class = "form-group col-md-3">
         <%= f.label :project %><br>
@@ -20,17 +28,18 @@
       </div>
     </div>
 
+
     <div class = "row">
       <div class = "form-group col-md-3">
         <%= f.label :start_time %><br>
-        <%= f.time_field :start_time, class: "form-control" %>
+        <%= f.text_field :start_time, class: "form-control time-pick" %>
       </div>
     </div>
 
     <div class = "row">
       <div class = "form-group col-md-3">
         <%= f.label :end_time %><br>
-        <%= f.time_field :end_time, class: "form-control" %>
+        <%= f.text_field :end_time, class: "form-control time-pick" %>
       </div>
     </div>
 
