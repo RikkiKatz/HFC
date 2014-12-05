@@ -9,6 +9,7 @@ Website::Application.configure do
   config.assets.compile = false
   config.assets.digest = true
   config.assets.version = '1.0'
+  config.assets.precompile += ['jquery.js', 'jquery_ujs.js']
   config.log_level = :info
   config.active_support.deprecation = :notify
   config.log_formatter = ::Logger::Formatter.new
