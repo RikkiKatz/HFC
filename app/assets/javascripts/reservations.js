@@ -1152,8 +1152,7 @@ $(function() {
 
 	$('.time-pick').timepicker({
 	  'minTime': '9:00am',
-	  'maxTime': '9:00pm',
-     'timeFormat': 'g:ia'
+	  'maxTime': '9:00pm'
 	});
 
 });
