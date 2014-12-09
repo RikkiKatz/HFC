@@ -8,7 +8,7 @@ class Reservation < ActiveRecord::Base
    	self.created_on(Date.today)
 	end
 
-	has_many :user_names, :dependent => :destroy
-	accepts_nested_attributes_for :user_names
+##	has_many :user_names, :dependent => :destroy
+#	accepts_nested_attributes_for :user_names
 
 end
