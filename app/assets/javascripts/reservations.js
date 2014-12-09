@@ -1155,4 +1155,6 @@ $(function() {
 	  'maxTime': '9:00pm'
 	});
 
+	$('.dropdown-toggle').dropdown()
+
 });

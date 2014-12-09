@@ -14,12 +14,14 @@
   <form role="form">
     <br>
   
-   <div class = "row">
+<% if false %>    
+  <div class = "row">
       <div class = "form-group col-md-3">
-        <%= f.label :members %><br>
-        <%= f.collection_select( :user_id, User.all, :id, :name, include_blank: true) %>
+        <%= f.label :name %><br> 
+         <%= f.collection_select( :user_id, User.all, :id, :name, include_blank: true) %>
       </div>
     </div>
+<% end %>
 
     <div class = "row">
       <div class = "form-group col-md-3">
@@ -32,7 +34,6 @@
       <div class = "form-group col-md-3">
         <%= f.label :start_time %><br>
         <%= f.text_field :start_time, class: "form-control time-pick" %>
-        <%= f.hidden_field :start_time %>
       </div>
     </div>
 
@@ -46,7 +47,7 @@
     <div class = "row">
       <div class = "form-group col-md-3">
         <%= f.label :room_number %><br>
-        <%= f.select(:which_room, [["Room 1", 1], ["Room 2", 2], ["Room 3", 3], ["Red", "Red"], ["Orange", "Orange"], ["Yellow", "Yellow"], ["Green", "Green"]]) %>
+        <%= f.select(:which_room, [["Room 1", 1], ["Room 2", 2], ["Room 3", 3], ["Red", "Red"], ["Orange", "Orange"], ["Yellow", "Yellow"], ["Green", "Green"]], class: "dropdown-toggle") %>
       </div>
     </div>
 
