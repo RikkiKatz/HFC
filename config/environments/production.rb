@@ -10,8 +10,9 @@ Website::Application.configure do
   config.assets.digest = true
   config.assets.version = '1.0'
   config.assets.precompile += ['jquery.js', 'jquery_ujs.js']
+  config.assets.precompile += %w( jquery-timepicker-jt.js )
   config.log_level = :info
   config.active_support.deprecation = :notify
   config.log_formatter = ::Logger::Formatter.new
-  config.action_mailer.default_url_options = { :host => 'http://pinteresting-commits.herokuapp.com/' }
+  config.action_mailer.default_url_options = { :host => 'http://hfc-meetings.herokuapp.com/' }
 end
