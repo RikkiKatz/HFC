@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery-timepicker-jt
 //= require jquery_ujs
+//= require jquery-timepicker-jt
 //= require jquery.turbolinks
+//= require bootstrap
 //= require turbolinks
 //= require_tree .
-//= require bootstrap
