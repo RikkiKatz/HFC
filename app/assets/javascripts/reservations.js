@@ -1148,13 +1148,13 @@ $(function() {
 		typeaheadHighlight: true,
 		noneOption: false
 	};
-}));
+	}));
 
 	$('.time-pick').timepicker({
-	  'minTime': '9:00am',
-	  'maxTime': '9:00pm'
+	  'minTime': '8:00am',
+	  'maxTime': '9:00pm',
+	  'timeFormat': 'h:i A',
+	  'forceRoundTime': true
 	});
-
-	$('.dropdown-toggle').dropdown()
 
 });
