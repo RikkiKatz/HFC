@@ -1153,8 +1153,13 @@ $(function() {
 	$('.time-pick').timepicker({
 	  'minTime': '8:00am',
 	  'maxTime': '9:00pm',
-	  'timeFormat': 'h:i A',
 	  'forceRoundTime': true
+	});
+
+	$('.durationExample').timepicker({
+	    'minTime': '8:00am',
+	    'maxTime': '9:00pm',
+	    'showDuration': true
 	});
 
 });

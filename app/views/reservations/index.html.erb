@@ -3,8 +3,8 @@
 
   <div id="image-container">
     <img id="image-center" src="../assets/main_img.png" class="img-responsive" alt="HFC city"> 
-  </div><br>
-  
+  </div><br> 
+
   <center>    
     <p><%= link_to 'Create a Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %></p>
   </center>
@@ -38,13 +38,17 @@
           <tbody>
             <% @reservations.each do |r| %>
               <tr>
-                <td><%= current_user.name %></td> 
-                <td><%= r.project %></td>
+                <td><%= r.user.name if r.user.name != nil %></td> 
+                <td><%= r.project if r.project != nil %></td>
                 <td><%= r.start_time.strftime("%I:%M %p") if r.start_time != nil %></td>
                 <td><%= r.end_time.strftime("%I:%M %p") if r.end_time != nil %></td>
-                <td><%= r.which_room %></td>
-                <td><%= link_to 'Edit', edit_reservation_path(r) %></td>
-                <td><%= link_to 'Destroy', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= r.which_room if r.which_room != nil %></td>
+
+                <% if r.user == current_user %>
+                  <td><%= link_to 'Edit', edit_reservation_path(r) %></td>
+                  <td><%= link_to 'Destroy', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% end %>
+
               </tr>
             <% end %>
           </tbody>
@@ -70,6 +74,5 @@
       </div>
     </div>
   </div>
-
 <% end %>
 </p>

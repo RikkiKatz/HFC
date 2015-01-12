@@ -1,15 +1,17 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
 
   # GET /reservations
   # GET /reservations.json
   def index
-    @reservations = Reservation.today.order(which_room: :asc, start_time: :desc)
+    @reservations = Reservation.today.order(start_time: :asc, which_room: :asc)
   end
 
   # GET /reservations/new
   def new
-    @reservation = Reservation.new
+    #@reservation = Reservation.new
+    @reservation = current_user.reservations.build
   end
 
   def show
@@ -22,7 +24,7 @@ class ReservationsController < ApplicationController
   # POST /reservations
   # POST /reservations.json
   def create
-    @reservation = Reservation.new(reservation_params)
+    @reservation = current_user.reservations.build(params[:reservation])
 
     respond_to do |format|
       if @reservation.save
