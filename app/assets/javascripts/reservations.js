@@ -1,5 +1,5 @@
 //timepicker function to be 
-//implemented in app/views/reserveations/_form.html.erb
+//implemented in app/views/reservations/_form.html.erb
 //for start_time and end_time
 
 
@@ -1148,18 +1148,13 @@ $(function() {
 		typeaheadHighlight: true,
 		noneOption: false
 	};
+
 	}));
 
 	$('.time-pick').timepicker({
 	  'minTime': '8:00am',
 	  'maxTime': '9:00pm',
 	  'forceRoundTime': true
-	});
-
-	$('.durationExample').timepicker({
-	    'minTime': '8:00am',
-	    'maxTime': '9:00pm',
-	    'showDuration': true
 	});
 
 });

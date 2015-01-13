@@ -13,14 +13,14 @@
   
   <form role="form">
     <br>
-  
-    <% if false %>    
+
+    <% if false %>
       <div class = "row">
-          <div class = "form-group col-md-3">
-            <%= f.label :name %><br> 
-             <%= f.collection_select( :user_id, User.all, :id, :name, include_blank: true) %>
-          </div>
+        <div class = "form-group col-md-3">
+          <%= f.label :name %><br> 
+           <%= f.select :user_name, User.all.map(&:name), { multiple: true, size: 5 } %>
         </div>
+      </div>
     <% end %>
 
     <div class = "row">

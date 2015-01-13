@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-timepicker-jt
+//= require datepair.js 
 //= require jquery.turbolinks
 //= require bootstrap
 //= require turbolinks

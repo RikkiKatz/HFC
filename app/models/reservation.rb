@@ -9,7 +9,4 @@ class Reservation < ActiveRecord::Base
 	end
 
 	belongs_to :user
-
-#	Reservation.user_name == User.name
-
 end
