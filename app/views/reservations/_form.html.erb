@@ -10,49 +10,44 @@
       </ul>
     </div>
   <% end %>
-  
-  <form role="form">
-    <br>
+  <br>
 
-    <% if false %>
-      <div class = "row">
-        <div class = "form-group col-md-3">
-          <%= f.label :name %><br> 
-           <%= f.select :user_name, User.all.map(&:name), { multiple: true, size: 5 } %>
-        </div>
-      </div>
-    <% end %>
-
-    <div class = "row">
-      <div class = "form-group col-md-3">
-        <%= f.label :project %><br>
-        <%= f.text_field :project, class: "form-control" %>
-      </div>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <%= f.label :meeting_with %><br>
+      <%= f.select :user_name, User.all.map(&:name), { multiple: true, size: 5 }, {:include_blank => 'Default'}%>
     </div>
+  </div>
 
-    <div class = "row">
-      <div class = "form-group col-md-3">
-        <%= f.label :start_time %><br>
-        <%= f.text_field :start_time, class: "form-control time-pick" %>
-      </div>
+  <div class = "row">
+    <div class = "form-group col-md-12">
+      <%= f.label :project %><br>
+      <%= f.text_field :project, class: "form-control" %>
     </div>
+  </div>
 
-    <div class = "row">
-      <div class = "form-group col-md-3">
-        <%= f.label :end_time %><br>
-        <%= f.text_field :end_time, class: "form-control time-pick" %>
-      </div>
+  <div class = "row">
+    <div class = "form-group col-md-12">
+      <%= f.label :start_time %><br>
+      <%= f.text_field :start_time, class: "form-control time-pick" %>
     </div>
+  </div>
 
-    <div class = "row">
-      <div class = "form-group col-md-3">
-        <%= f.label :room_number %><br>
-        <%= f.select(:which_room, [["Room 1", 1], ["Room 2", 2], ["Room 3", 3], ["Red", "Red"], ["Orange", "Orange"], ["Yellow", "Yellow"], ["Green", "Green"], ["2E Room 1", 8], ["2E Room 2", 9]], class: "dropdown-toggle") %>
-      </div>
+  <div class = "row">
+    <div class = "form-group col-md-12">
+      <%= f.label :end_time %><br>
+      <%= f.text_field :end_time, class: "form-control time-pick" %>
     </div>
+  </div>
 
-    <div class="actions">
-      <%= f.submit %>
+  <div class = "row">
+    <div class = "form-group col-md-12">
+      <%= f.label :room_number %><br>
+      <%= f.select(:which_room, [["Room 1", 1], ["Room 2", 2], ["Room 3", 3], ["Red", "Red"], ["Orange", "Orange"], ["Yellow", "Yellow"], ["Green", "Green"], ["2E Room 1", 8], ["2E Room 2", 9]], class: "dropdown-toggle") %>
     </div>
-  </form>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

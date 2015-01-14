@@ -1,12 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-
 <div class="panel panel-default">
 	<div class="panel-body">
 
 		<p>
-			<h2 class="panel-title"> <strong>User:</strong> 
+			<h2 class="panel-title"> <strong>User Name:</strong> 
 			<%= current_user.name %> </h2>
+		</p>
+
+		<p>
+			<h2 class="panel-title"> <strong>Meeting With:</strong> 
+			<%= @reservation.user_name %> </h2>
 		</p>
 
 		<p>

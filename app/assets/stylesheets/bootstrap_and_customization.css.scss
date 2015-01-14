@@ -5,35 +5,20 @@ $font-family-sans-serif:      'Lato', 'Helvetica Neue', Helvetica, Arial, sans-s
 $navbar-height:               45px;
 $navbar-default-bg:           white;
 $navbar-default-brand-color:  #f39c12;
-$brand-primary:					      #c0392b;
-$jumbotron-bg:						    white;
+$brand-primary:					#c0392b;
+$jumbotron-bg:						white;
 
-@import 'bootstrap';
-
-#image-container { 
-  min-width:782px; /* width of 3 images (746px) plus images' padding and border (36px) */ 
- } 
-
-#image-container img { 
-  background-color:#fff;  
- } 
-
-#image-right { 
-  float:right; 
-  width:150px; 
-  height:300px; 
- } 
-
-#image-left { 
-  float:left; 
-  width:150px; 
-  height:300px; 
- } 
+@import 'bootstrap'; 
 
 #image-center { 
   display:block; 
   width:100%;  
   margin:auto; 
+}
+
+#side-image {
+	width:10%;
+	margin:auto; 
 }
 
 .navbar-brand {
