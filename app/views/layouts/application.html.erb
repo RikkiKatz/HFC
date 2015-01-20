@@ -16,7 +16,7 @@
 
  <%= render 'layouts/header' %>
 
-<% if current_page?('/') %>
+<% if current_page?('/') && ! user_signed_in? %>
 	<img id="image-center" src="../assets/main_img.png" class="img-responsive" alt="HFC City">
 <% end %>
 
