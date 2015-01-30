@@ -14,9 +14,14 @@
 
   <div class="row">
     <div class="form-group col-md-12">
-      <%= f.label :meeting_with %><br>
-      <%= f.select :user_name, User.all.map(&:name), { multiple: true, size: 5 }, {:include_blank => 'Default'}%>
+      <%= f.label :user_ids, 'Meeting with' %><br>
+      <%= f.select :user_ids, options_for_select(User.all.collect{|user| [user.name, user.id]}, @reservation.user_ids), {multiple: true, :include_blank => true,:class=>'user-id-widget', size: 5} %> 
     </div>
+    <script>
+      $(document).ready(function() {
+        $('.user-id-widget').select2();
+      });
+    </script>
   </div>
 
   <div class = "row">
@@ -42,8 +47,8 @@
 
   <div class = "row">
     <div class = "form-group col-md-12">
-      <%= f.label :room_number %><br>
-      <%= f.select(:which_room, [["Room 1", 1], ["Room 2", 2], ["Room 3", 3], ["Red", "Red"], ["Orange", "Orange"], ["Yellow", "Yellow"], ["Green", "Green"], ["2E Room 1", 8], ["2E Room 2", 9]], class: "dropdown-toggle") %>
+      <%= f.label :which_room, 'Room' %><br>
+      <%= f.select(:which_room, [["Room 1", 1], ["Room 2", 2], ["Room 3", 3], ["Red", "Red"], ["Orange", "Orange"], ["Yellow", "Yellow"], ["Green", "Green"], ["2E Room 1", 8], ["2E Room 2", 9]], class: "dropdown-toggle", :include_blank => true) %>
     </div>
   </div>
 

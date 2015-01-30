@@ -9,4 +9,7 @@ class Reservation < ActiveRecord::Base
 	end
 
 	belongs_to :user
+
+	has_many :reservations_users
+	has_many :users, :through=>:reservations_users
 end

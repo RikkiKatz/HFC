@@ -14,4 +14,15 @@ Website::Application.configure do
   config.active_support.deprecation = :notify
   config.log_formatter = ::Logger::Formatter.new
   config.action_mailer.default_url_options = { :host => 'http://hfc-meetings.herokuapp.com/' }
+
+  config.action_mailer.smtp_settings = {
+    # from heroku mandrill instruction page
+    #:port =>           '587',
+    #:address =>        'smtp.mandrillapp.com',
+    #:user_name =>      ENV['MANDRILL_USERNAME'],
+    #:password =>       ENV['MANDRILL_APIKEY'],
+    #:domain =>         'heroku.com',
+    #:authentication => :plain
+  }
+  config.action_mailer.delivery_method = :smtp
 end

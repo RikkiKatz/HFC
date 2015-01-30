@@ -12,9 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require select2
 //= require jquery-timepicker-jt
-//= require datepair.js 
-//= require jquery.turbolinks
+//= require datepair.js
+// require jquery.turbolinks
 //= require bootstrap
-//= require turbolinks
+// require turbolinks
 //= require_tree .

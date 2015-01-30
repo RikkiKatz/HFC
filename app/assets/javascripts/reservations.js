@@ -2,6 +2,7 @@
 //implemented in app/views/reservations/_form.html.erb
 //for start_time and end_time
 
+//add select2.full.min.js here and add function on the bottom?
 
 $(function() {
 

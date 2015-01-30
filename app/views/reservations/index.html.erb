@@ -1,72 +1,69 @@
 <div>
-<% if user_signed_in? %>
+  <% if user_signed_in? %>
+    <center>    
+      <p><%= link_to 'Create a Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %></p>
+    </center>
 
-  <center>    
-    <p><%= link_to 'Create a Reservation', new_reservation_path, class: "btn btn-warning btn-sm" %></p>
-  </center>
+    <br>
 
-  <br>
-
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <div class="panel-tile">
-        <font size="4">Current Reservations</font>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-tile">
+          <font size="4">Current Reservations</font>
+        </div>
       </div>
-    </div>
 
-    <div class="panel-body">
+      <div class="panel-body">
 
-      <div class="table-responsive">
-        <table class = "table table-striped">
-          <thead>
-            <tr>
-              <th>User Name</th>
-              <th>Meeting With</th>
-              <th>Project</th>
-              <th>Start time</th>
-              <th>End time</th>
-              <th>Room Number</th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <% @reservations.each do |r| %>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
               <tr>
-                <td><%= r.user.name if r.user.name != nil %></td> 
-                <td><%= r.user_name %></td>
-                <td><%= r.project if r.project != nil %></td>
-                <td><%= r.start_time.strftime("%I:%M %p") if r.start_time != nil %></td>
-                <td><%= r.end_time.strftime("%I:%M %p") if r.end_time != nil %></td>
-                <td><%= r.which_room if r.which_room != nil %></td>
-
-                <% if r.user == current_user %>
-                  <td><%= link_to 'Edit', edit_reservation_path(r) %></td>
-                  <td><%= link_to 'Destroy', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                <% end %>
-
+                <th>User Name</th>
+                <th>Meeting With</th>
+                <th>Purpose</th>
+                <th>Start time</th>
+                <th>End time</th>
+                <th>Room</th>
+                <th></th>
+                <th></th>
+                <th></th>
               </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+            </thead>
 
-<% else %>
-  <div class="jumbotron">
-    <div class="container">
-      <div class="jumbotron">
-        <div class="container">
-          <center><h1>HFC Meeting Rooms</h1>
-          <h2>Log in to access room reservations.</h2><br>
-          <%= link_to "Log In", new_user_session_path, class: "btn btn-warning btn-lg" %>
-          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %></center>
+            <tbody>
+              <% @reservations.each do |r| %>
+                <tr>
+                  <td><%= r.user.name if r.user.name != nil %></td> 
+                  <td><%= r.user_name if r.user_name != nil %></td>
+                  <td><%= r.project if r.project != nil %></td>
+                  <td><%= r.start_time.strftime("%I:%M %p") if r.start_time != nil %></td>
+                  <td><%= r.end_time.strftime("%I:%M %p") if r.end_time != nil %></td>
+                  <td><%= r.which_room if r.which_room != nil %></td>
+
+                  <% if r.user == current_user %>
+                    <td><%= link_to 'Edit', edit_reservation_path(r) %></td>
+                    <td><%= link_to 'Destroy', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  <% end %>
+
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-  </div>
-<% end %>
+
+  <% else %>
+    <div class="jumbotron">
+      <div class="container">
+        <center>
+          <h1>HFC Meeting Rooms</h1>
+          <h2>Log in to access room reservations.</h2><br>
+          <%= link_to "Log In", new_user_session_path, class: "btn btn-warning btn-lg" %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
+        </center>
+      </div>
+    </div>
+  <% end %>
 </div>
